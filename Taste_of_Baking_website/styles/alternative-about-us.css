@@ -1,0 +1,84 @@
+@charset "UTC-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* About Us sheet for Taste Of Baking*/
+
+/* Developde by: Kimberly Alizadeh, Bahareh Jabarzadnouri, Kathryn Post, Alysha Westwood/
+
+/* Script Date: August 28, 2021 */
+
+
+.about-grid-container{
+    margin: auto;
+    display: grid;
+    grid-template-columns:100%;
+    gap: 1rem;
+}
+
+#workbench-img{
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    padding: 2em;
+}
+
+#figure-div{
+    margin: 0;
+    padding: .5rem;
+    
+}
+
+#figure-div img {
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+figure{
+    justify-content: center;
+    margin: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    p {
+        font-size: 20px;
+        padding: .5rem;
+    }
+
+    .about-grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1.5rem;
+    }
+
+    .head {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px)  {
+
+    #figure-div{
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    figure{
+        align-content: center;
+        margin: 0px;
+    }
+    
+}

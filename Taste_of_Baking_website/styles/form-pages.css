@@ -1,0 +1,103 @@
+@charset "UTC-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Forms styles sheet for Taste Of Baking*/
+
+/* Developde by: Kimberly Alizadeh, Bahareh Jabarzadnouri, Kathryn Post, Alysha Westwood/
+
+/* Script Date: August 28, 2021 */
+
+
+.page-head, .footnote{
+    font-weight: lighter;
+    text-align: center;
+    text-shadow: #fafcf6 1px 1px 2px;
+}
+
+.title{
+    text-align:center;
+}
+
+
+main{
+    padding: 2em;
+    width: 70%;
+    margin: auto;
+
+}
+
+
+.grid-container{
+    width: 80%;
+    margin: auto;
+    background-color:#fafcf6;
+    border: solid 3px #868268;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 200px;
+}
+
+.form-input {
+    background-color: #ffffff;
+    border: 2px #b8b284 solid;
+    border-radius: 5px;
+    font-family: 'Merriweather';
+    color: #868268;
+    font-size: 12pt;
+    width: 100%;
+
+}
+
+.form-button{
+    width: fit-content;
+}
+
+.grid-container > div{
+    text-align: left;
+    padding: 7px 0;
+  }
+
+#reset, #submit{
+    cursor: pointer;
+    padding: .75em 1em;
+    transition-duration: 0.4s;
+    box-shadow: 1px 1px 5px #868268;
+}
+
+
+.form-button:link{
+    box-shadow: 2px 2px 5px #868268;
+}
+
+.form-button:hover{
+    background-color: #b8b284 ;
+    color: #4d4c4b;
+}
+
+
+@media only screen and (min-width: 600px) {
+.grid-container{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 1.5rem;
+}
+
+.grid-container > div{
+  text-align: left;
+  padding: 10px 0;
+  font-size: 18px;
+  
+}
+
+div.left{
+    text-align: right;
+}
+
+.check{
+    grid-column: 1 / span 2;
+}
+
+input[id="file"]{
+    width: 70%;
+}
+}

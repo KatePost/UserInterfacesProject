@@ -1,0 +1,110 @@
+@charset "UTC-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Home page styles sheet for Taste Of Baking*/
+
+/* Developde by: Kimberly Alizadeh, Bahareh Jabarzadnouri, Kathryn Post, Alysha Westwood/
+
+/* Script Date: August 28, 2021 */
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.home * {
+box-sizing: border-box;
+}
+
+.home{
+    display: grid;
+    height: auto;
+    margin: 2em auto auto auto;
+    padding: 2em;
+    color: #555;
+    font-family: 'Merriweather';
+    width: 80%;
+}
+
+.heading{
+    text-align: left;
+}
+
+        
+.containers {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 10vh;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+/* styling the star rating */
+.checked {
+    color: orange;
+}
+
+/* Create four equal columns that sits next to each other */
+.home-column{
+-ms-flex: 25%; /* IE10 */
+flex: 25%;
+max-width: 25%;
+padding: 0 15px;
+}
+
+
+/* Responsive layout - makes a three column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .home-column {
+        -ms-flex: 33%;
+        flex: 33%;
+        max-width: 33%;
+    }
+}
+    
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 700px) {
+        .home-column{
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+        }
+    }
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .home-column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+.home-column img {
+    margin-top: 40px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.home-column p{
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    padding: 0 6px;
+    font-size: small;
+}
+
+.home-column h4{
+    min-height: 7vh;
+    padding: 1px 1px 0;
+}

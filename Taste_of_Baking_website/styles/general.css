@@ -1,0 +1,349 @@
+@charset "UTC-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@font-face {
+    font-family: 'Vegan';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Vegan Style Personal Use Regular'), url('../fonts/Vegan\ Style\ Personal\ Use.woff') format('woff');
+    }
+
+/* General styles sheet for Taste Of Baking*/
+
+/* Developde by: Kimberly Alizadeh, Bahareh Jabarzadnouri, Kathryn Post, Alysha Westwood/
+
+/* Script Date: August 28, 2021 */
+
+
+/* default styles */
+
+/* for all screen sizes */
+/* containers */
+body{
+    color: #555;
+    font-family: 'Merriweather', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: auto;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 2em 0;
+}
+/*--*/
+/* links */
+a:link {
+    color: #008f88;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #640164;
+}
+
+a:hover {
+    color: #07ada5;
+}
+
+a:active {
+    text-decoration: underline;
+}
+/*--*/
+/* inputs */
+button, input {
+    color: #868268;
+    font-family: 'Merriweather';
+    font-size: 12pt;
+    background-color: white;
+    border: 2px #b8b284 solid;
+    border-radius: 5px;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+    padding: .75em 1em;
+    transition-duration: 0.4s;
+    box-shadow: 1px 1px 5px #868268;
+}
+
+button:link, input[type="submit"]:link, input[type="reset"]:link{
+    box-shadow: 2px 2px 5px #868268;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover{
+    color: #4d4c4b;
+    background-color: #b8b284 ;
+}
+
+button:active, input[type="submit"]:active, input[type="reset"]:active {
+    box-shadow: 1px 1px 1px #868268;
+}
+/*--*/
+/*---*/
+
+/* for mobile screen sizes only */
+@media only screen and (max-width: 700px) {
+/* containers */
+    main {
+        font-size: 0.8em;
+    }
+/*--*/
+}
+/*---*/
+
+/* -- default styles end -- */
+
+
+/* header / footer styles */
+
+/* for all screen sizes */
+/* header / footer */
+header, footer {
+    font-family: 'Merriweather';
+    box-shadow: 1px 1px 5px lightgrey;
+    padding: 0;
+}
+
+header.major {
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    padding: 1em;
+}
+
+footer.major li::marker {
+    content: none;
+}
+
+.major {
+    background-color: #fafcf6;
+}
+
+.minor {
+    background-color: #fff1dc;
+    box-shadow: 0 0 20px inset goldenrod, 0 0 5px grey;
+}
+
+header a:link, footer a:link {
+    color: #555;
+    text-decoration: none;
+}
+
+header a:visited, footer a:visited {
+    color: #555;
+}
+
+header a:hover, footer a:hover {
+    color: #07ada5;
+}
+
+header a:active, footer a:active {
+    color: grey;
+}
+/*--*/
+/* logo */
+#logo {
+    width: 20%;
+    max-width: fit-content;
+    justify-self: start;
+    margin: 0;
+    padding: 0;
+}
+
+#logo img {
+    max-height: 100%;
+    transform: scaleX(-1);
+    padding: 0;
+}
+
+#logo figcaption {
+    color: #eba48d;
+    font-family: 'Vegan', Luminari, 'Brush Script MT', 'Bradley Hand';
+    font-size: 18pt;
+    position: absolute;
+    left: 0;
+    margin: 0;
+}
+/*--*/
+/* nav */
+nav li {
+    display: block;
+}
+
+.navbar li, .navbar a {
+    transition-duration: 0.2s;
+    padding: .5em .5em;
+}
+
+.navbar a:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #f7c6b5;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #e4d9d6;
+}
+
+.navbar a:active {
+    color: gray;
+    background-color: antiquewhite;
+}
+
+nav {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+#socialsNav ul {
+    justify-content: space-between;
+}
+/*--*/
+/* inputs */
+.minor input {
+    width: 40vw;
+    border: none;
+    border-radius: .5em;
+    box-shadow: inset 0 0 5px #e0e0e0;
+    padding: .75em;
+}
+
+.minor input:focus {
+    box-shadow: inset 0 0 5px goldenrod;
+    outline: none;
+}
+
+.minor button {
+    color: grey;
+    font-family: 'Merriweather';
+    background: #80d6d2;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.minor button:hover {
+    background-color: #8fece8;
+    box-shadow: 2px 2px 10px grey;
+}
+
+.minor button:active {
+    box-shadow: 2px 2px 2px grey;
+}
+
+.textBar {
+    text-align: center;
+    padding: .5em;
+}
+/*--*/
+/* specific text */
+#copyright {
+    font-size: small;
+    text-align: center;
+    margin: auto;
+}
+/*--*/
+/*---*/
+
+/* for mobile screen sizes only */
+@media only screen and (max-width: 700px) {
+/* logo */
+#logo {
+    height: 2em;
+    width: 100%;
+}
+
+#logo img {
+    height: 100%;
+}
+    
+#logo figcaption {
+    position: relative;
+    bottom: 80%;
+    left: 1em;
+}
+/*--*/
+}
+/*---*/
+
+/* for desktop screen sizes only */
+@media only screen and (min-width: 700px) {
+/* header / footer */
+header.major{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+    align-content: start;
+}
+
+footer.minor {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+.minor {
+    display: grid;
+    justify-items: center;
+}
+/*--*/
+/* logo */
+
+#logo {
+    height: 6.5rem;
+}
+
+#logo img {
+    position: absolute;
+    left: 3.5em;
+    height: 4.75em;
+}
+
+#logo figcaption {
+    bottom: 0;
+}
+/*--*/
+/* nav */
+nav {
+    width: 100%;
+}
+
+.navbar {
+    justify-self: center;
+}
+
+.navbar li, .navbar a{
+    padding: .75em 1em;
+}
+
+#socialsNav {
+    justify-self: end;
+}
+/*--*/
+/* specific text */
+#message {
+    font-size: 2em;
+}
+/*--*/
+}
+/*---*/
+
+/* header / footer styles end */

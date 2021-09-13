@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="If you have feedback about our recipes or our website, please let us know. We are always striving to improve, and we welcome your help!" />
+    <meta name="keywords" content="contact us, feedback, baking, recipe development" />
+    <title>Contact Us | Taste of Baking</title>
+    <link rel="stylesheet" href="styles/form-pages.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="major">
+            <a href="index.html">
+                <figure id="logo">
+                    <img src="images/minimal-logo-color-change.png" alt="Home | Taste of Baking Logo" />
+                    <figcaption>Taste of Baking</figcaption>
+                </figure>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="alternative-about-us.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="submit-recipe.html">Submit Recipes</a></li>
+                </ul>
+            </nav>
+            <nav id="socialsNav">
+                <ul>
+                    <li><a href="https://www.twitch.tv"><span class="fa fa-twitch"></span></a></li>
+                    <li><a href="https://www.youtube.com"><span class="fa fa-youtube-play"></span></a></li>
+                    <li><a href="https://www.instagram.com"><span class="fa fa-instagram"></span></a></li>
+                    <li><a href="https://www.facebook.com"><span class="fa fa-facebook-square"></span></a></li>
+                    <li><a href="https://www.twitter.com"><span class="fa fa-twitter-square"></span></a></li>
+                    <li><a href="#top"><span class="fa fa-search"></span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <header class="minor">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="cake-category.html">Cakes</a></li>
+                    <li><a href="cookies-category.html">Cookies</a></li>
+                    <li><a href="Bread-category.html">Bread</a></li>
+                    <li><a href="pie-category.html">Pie</a></li>
+                </ul>
+            </nav>
+            <form class="textBar" id="searchForm">
+                <input type="search" name="searchBar" id="searchBar" size="50" autofocus />
+                <button type="submit" form="searchForm">Search</button>
+            </form>
+        </header>
+        <main>
+            <h1 class="title">Contact Us</h1>
+            <h3 class="page-head">We love hearing from you!<br />If you have feedback, questions, or compliments please
+                reach out to us by
+                responding here.<br /> You can also email us directly at <a
+                    href="mailto:customerrelations@tasteofbaking.com">help@TOB.com</a></h3>
+            <form action="form-submit-contact.html" method="POST">
+
+                <div class="grid-container">
+                    <div class="left"><label for="name">Your name:</label></div>
+                    <div><input class="form-input" id="name" type="text" size="30" maxlength="60" placeholder="Jane Smith"/></div>
+                    <div class="left"><label for="email" class="label">Your email address:</label></div>
+                    <div><input id="email" class="form-input" type="email" size="30" maxlength="40"  placeholder="address@example.com"></div>
+                    <div class="left"><label for="category" class="label">Category:<sup>*</sup></label></div>
+                    <div>
+                        <select class="form-input" id="category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="question">Recipe Question</option>
+                            <option value="feedback">Recipe Feedback</option>
+                            <option value="comments">General Comments</option>
+                            <option value="help">Site Help</option>
+                        </select>
+                    </div>
+
+                    <div class="left"><label for="description" class="label">Your message:<sup>*</sup></label></div>
+                    <div><textarea class="form-input" name="description" id="description" cols="30" rows="10"
+                            placeholder="type something..." maxlength="600" required></textarea></div>
+                    <div><input id="reset" class="form-button" type="reset" value="Reset form" />
+                    </div>
+                    <div class="centered"><input class="form-button" type="submit" id="submit"
+                            value="Submit feedback" />
+                    </div>
+                </div>
+
+            </form>
+            <h4 class="footnote">* denotes required field</h4>
+        </main>
+        <footer class="minor">
+            <span id="message">Stay in touch...</span>
+            <form class="textBar" id="subscribeForm" action="subscribe-completed.html" method="post">
+                <input type="email" name="subscribe" id="subscribe" size="50" placeholder="address@example.com"
+                    required />
+                <button type="submit" form="subscribeForm">Sign up</button>
+            </form>
+        </footer>
+        <footer class="major">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="alternative-about-us.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="submit-recipe.html">Submit a Recipe to be Featured</a></li>
+            </ul>
+            <div id="copyright"><span>copyright &copy; 2021</span></div>
+        </footer>
+    </div>
+</body>
+
+</html>
