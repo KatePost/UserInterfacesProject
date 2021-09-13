@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="styles/general.css">
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/ico"/> 
+    <link rel="icon" href="images/favicon.ico" type="image/ico"/>
+    <script src="scripts/headerFooter.js"></script>
 
 </head>
 <body>
     <!--Header-->
-    <div class="container">
+    <!--div class="container">
             <header class="major">
                 <a href="index.html">
                     <figure id="logo">
@@ -55,8 +56,9 @@
                     <input type="search" name="searchBar" id="searchBar" size="50" autofocus />
                     <button type="submit" form="searchForm">Search</button>
                 </form>
-            </header>
+            </header-->
             <!-- Main content-->
+            <script>writeHeader()</script>
             <main>
                 <div class ="home">
                 <div class="heading">
@@ -149,13 +151,13 @@
                 </div>
                 </div>
                 </main>
-                <footer class="minor">
+                <!--footer-->
+                <!--footer class="minor">                    
                     <span id="message">Stay in touch...</span>
                     <form class="textBar" id="subscribeForm" action="subscribe-completed.html" method="post">
                         <input type="email" name="subscribe" id="subscribe" size="50" placeholder="address@example.com" required/>
                         <button type="submit" form="subscribeForm">Sign up</button>
                     </form>
-                <!--Footer-->
                 </footer>
                 <footer class="major">
                     <ul>
@@ -165,7 +167,8 @@
                         <li><a href="submit-recipe.html">Submit a Recipe to be Featured</a></li>
                     </ul>
                     <div id="copyright"><span>copyright &copy; 2021</span></div>
-                </footer>
+                </footer-->
+                <script>writeFooter()</script>
     </div>
 </body>
 
