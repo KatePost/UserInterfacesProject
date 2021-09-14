@@ -8,34 +8,42 @@
     <title>Event Calendar | Taste of Baking</title>
     <link rel="stylesheet" href="styles/calendar.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src = "scripts/headerFooter.js"></script>
     <script type="text/javascript" src="scripts/calendar.js"></script>
+    <script src="scripts/headerFooter.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
-        <script>writeHeader();</script>
-        <main class="event-grid-container">
-            <div class="head">
-                <h1>Event Calendar</h1>
-            </div>
-            <div>
-            <h3>Check out our event calendar for classes and activities</h3>
-            </div>
-            <div class="calendar">
-            <script >
-                getCalendar();
+    <script>writeHeader()</script>
+    <main class="event-grid-container">
+        <div class="head">
+            <h1>Event Calendar</h1>
+        </div>
+        <div>
+            <h2>Check out our event calendar for classes and activities</h2>
+        </div>
+        <div class="calendar">
+            <script>
+                let day = getCalendar();
+                linkDate(day);
+                makeEvent("2021, 09, 17", " href='#here' ", "pink");
+                makeEvent("2021, 09, 20", " href='#here' ", "pink");
+                makeEvent("2021, 09, 30", " href='#here' ", "blue")
             </script>
-            </div>
-            <div>
-                <p>here</p>
-            </div>
-        </main>
-        <script>writeFooter();</script>
+            <ul>
+                <li class="green">Today</li>
+                <li class="pink">Classes</li>
+                <li class="blue">Events</li>
+            </ul>
+        </div>
+        <div id="here">
+            <p>Whether you want to up your cooking game or get inspired to create your own unique recipes, we have an event for you! Be aware that classes can fill up quickly, so be sure to check back here regularly for updates and new events.</p>
+        </div>
+    </main>
     </div>
+    <script>writeFooter()</script>
 </body>
-
-
 </html>

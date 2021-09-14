@@ -2,35 +2,101 @@
 
 .grid-container{
     font-family: 'Merriweather';
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
     background-color:#fafcf6;
     border: solid 3px #868268;
     border-radius: 10px;
     color: #555;
     display: grid;
-    gap: 1rem;
-    font-size: 18px;
+    gap: .25rem;
+    font-size: 14px;
+}
+
+.head{
+    text-align:center;
+}
+
+.grid-container > div{
+    text-align: center;
+    padding: 7px 0;
 }
 
 .title{
     grid-column: 1 / span 7;
-    text-align:center;
+    padding: 0;
+    font-size: 75%;
+}
+
+.grid-container a {
+    box-sizing: border-box;
+
+    margin: 0;
+    border-radius: 5px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.pink{
+    background-color: #f7c6b5;
+}
+
+.green{
+    background-color: #dfdab4 ;
+}
+
+.blue{
+    background-color: #80d6d2;
+
+}
+.today a{
+    padding: .75rem;
+
+    background-color: #dfdab4 ;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 799px){
+    .grid-container{
+        gap: .5rem;
+        font-size: 18px;
+        gap: .25rem;
+    }
+}
+
+@media only screen and (min-width: 800px){
+  .grid-container{
+    gap: 1rem;
+    font-size: 18px;
+  padding: 0 2rem 2rem 2rem;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+.title{
+    grid-column: 1 / span 7;
+    padding: 0;
 }
 
 .event-grid-container{
-    width: 60%;
+    grid-template-columns: 50% 50%;
     display: grid;
+    gap: 1rem;
 }
 
 .head{
     grid-column: 1 / span 2;
-    text-align:center;
-
 }
 
 .calendar{
     grid-column: 2;
     grid-row: 2 / span 3;
-    align-content: left;
+}
 }
