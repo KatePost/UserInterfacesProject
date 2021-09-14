@@ -17,32 +17,61 @@
 
 <body>
     <script>writeHeader()</script>
-    <main class="event-grid-container">
-        <div class="head">
-            <h1>Event Calendar</h1>
+    <main>
+        <div class="event-grid-container">
+            <div class="head">
+                <h1>Event Calendar</h1>
+            </div>
+            <div>
+                <h2>Check out our event calendar for classes and activities</h2>
+            </div>
+            <div class="calendar">
+                <script>
+                    let day = getCalendar();
+                    linkDate(day);
+                    makeEvent("2021, 09, 17", " href='#sep-17' ", "pink");
+                    makeEvent("2021, 09, 20", " href='#sep-20' ", "pink");
+                    makeEvent("2021, 09, 30", " href='#sep-30' ", "blue")
+                </script>
+                <ul>
+                    <li class="green legend">Today</li>
+                    <li class="pink legend">Classes</li>
+                    <li class="blue legend">Events</li>
+                </ul>
+            </div>
+            <div id="here">
+                <p>Whether you want to up your cooking game or get inspired to create your own unique recipes, we have
+                    an
+                    event for you! Be aware that classes can fill up quickly, so be sure to check back here regularly
+                    for
+                    updates and new events.</p>
+            </div>
         </div>
-        <div>
-            <h2>Check out our event calendar for classes and activities</h2>
-        </div>
-        <div class="calendar">
-            <script>
-                let day = getCalendar();
-                linkDate(day);
-                makeEvent("2021, 09, 17", " href='#here' ", "pink");
-                makeEvent("2021, 09, 20", " href='#here' ", "pink");
-                makeEvent("2021, 09, 30", " href='#here' ", "blue")
-            </script>
+        <section class="event-start">
+            <h2 id="events">Events</h2>
             <ul>
-                <li class="green">Today</li>
-                <li class="pink">Classes</li>
-                <li class="blue">Events</li>
-            </ul>
-        </div>
-        <div id="here">
-            <p>Whether you want to up your cooking game or get inspired to create your own unique recipes, we have an event for you! Be aware that classes can fill up quickly, so be sure to check back here regularly for updates and new events.</p>
-        </div>
+                <li>
+                    <h3 id="sep-17">September 17<sup>th</sup> - Perfect Sugar Cookies</h3>
+                </li>
+                <p>Join our pro chef Cassie and learn from the best! She'll be covering how to roll out the perfect
+                    sugar cookie and decorative festive holiday favorites. </p>
+                <li>
+                    <h3 id="sep-20">September 20<sup>th</sup> - Fall Time Apple Pie</h3>
+                </li>
+                <p>The seasons are changing! Come join Alex as they walk you through the steps to make an apple pie that
+                    will whisk you off to a autumnal dream. Don't let the season slip away without making a delicious
+                    apple pie!</p>
+                <li>
+                    <h3 id="sep-30">September 30<sup>th</sup> - Desert Planning Community Get Together</h3>
+                </li>
+                <p>We know how stressful planning bakes for events can be, so come to our community workshop where we
+                    discuss planning and time management for desserts for events.</p>
+        </ul>
+        </section>
     </main>
+
     </div>
     <script>writeFooter()</script>
 </body>
+
 </html>

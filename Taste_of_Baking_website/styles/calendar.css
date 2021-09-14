@@ -20,6 +20,7 @@
 .grid-container > div{
     text-align: center;
     padding: 7px 0;
+    border-radius: 15px;
 }
 
 .title{
@@ -28,14 +29,7 @@
     font-size: 75%;
 }
 
-.grid-container a {
-    box-sizing: border-box;
-
-    margin: 0;
-    border-radius: 5px;
-}
-
-ul li{
+.legend{
     display: inline-block;
     padding: 8px;
     border-radius: 5px;
@@ -98,5 +92,8 @@ p {
 .calendar{
     grid-column: 2;
     grid-row: 2 / span 3;
+}
+.event-start{
+    grid-row-start: 5;
 }
 }

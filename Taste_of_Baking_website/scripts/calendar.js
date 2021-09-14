@@ -39,6 +39,7 @@ function dayNames() {
 
 function daysInMonth(todayDate) {
     let currentMonth = todayDate.getMonth();
+    let thisYear = todayDate.getFullYear();
 
     let numberDays = [
         31, 28, 31,
@@ -46,6 +47,9 @@ function daysInMonth(todayDate) {
         31, 31, 30,
         31, 30, 31
     ];
+    if((thisYear % 100 === 0) ? (thisYear % 400 === 0) : (thisYear % 4 === 0)){
+        numberDays[1] = 29;
+    }
     return numberDays[currentMonth];
 }
 
@@ -71,7 +75,7 @@ function dates(todayDate) {
     }
 }
 function linkDate(day) {
-    document.getElementById("date" + day).innerHTML = "<a href='alternative-about-us.html'>" + day + "</a>";
+    document.getElementById("date" + day).innerHTML = "<a href='#events'>" + day + "</a>";
 }
 
 function makeEvent(day, link, thisClass){
