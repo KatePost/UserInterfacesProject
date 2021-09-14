@@ -259,6 +259,14 @@ nav ul {
     text-align: center;
     margin: auto;
 }
+
+.lang.en::before{
+    content: "EN";
+}
+
+.lang.fr::before{
+    content:"FR";
+}
 /*--*/
 /*---*/
 

@@ -1,27 +1,59 @@
 function writeHeader(){
 
-let socials = [
-    ["https://www.twitch.tv", "fa fa-twitch"],
-    ["https://youtube.com", "fa fa-youtube-play"],
-    ["https://www.instagram.com", "fa fa-instagram"],
-    ["https://www.facebook.com", "fa fa-facebook-square"], 
-    ["https://www.twitter.com", "fa fa-twitter-square"],
-    ["#top", "fa fa-search"]
-]
+let socials, categories, navs;
 
-let categories = [
-    ["cake-category.html", "Cakes"],
-    ["cookies-category.html", "Cookies"],
-    ["bread-category.html", "Bread"],
-    ["pie-category.html", "Pie"]
-]
+/* French */
+if(document.documentElement.lang == "fr"){
+    socials = [
+        ["https://www.twitch.tv/fr", "fa fa-twitch"],
+        ["https://www.youtube.com/?hl=FR", "fa fa-youtube-play"],
+        ["https://www.instagram.fr", "fa fa-instagram"],
+        ["https://www.facebook.fr", "fa fa-facebook-square"], 
+        ["https://www.twitter.fr", "fa fa-twitter-square"],
+        ["#top", "fa fa-search"],
+        ["index.html", "lang en"]
+    ]
+    
+    categories = [
+        ["cake-category.html", "G&acirc;teaux"],
+        ["cookies-category.html", "Biscuits"],
+        ["bread-category.html", "Pains"],
+        ["pie-category.html", "Tartes"]
+    ]
+    
+    navs = [
+        ["about-us-fr.html", "À Propos de Nous"],
+        ["contact.html", "Contactez Nous"],
+        ["submit-recipe.html", "Soumettre des Recettes"],
+        ["calendar.html", "Calendrier"]
+    ]
+}
+/* English - DEFAULT */
+else {
+socials = [
+        ["https://www.twitch.tv", "fa fa-twitch"],
+        ["https://youtube.com", "fa fa-youtube-play"],
+        ["https://www.instagram.com", "fa fa-instagram"],
+        ["https://www.facebook.com", "fa fa-facebook-square"], 
+        ["https://www.twitter.com", "fa fa-twitter-square"],
+        ["#top", "fa fa-search"],
+        ["about-us-fr.html", "lang fr"]
+    ]
 
-let navs = [
-    ["alternative-about-us.html", "About"],
-    ["contact.html", "Contact"],
-    ["submit-recipe.html", "Submit Recipes"],
-    ["calendar.html", "Calendar of Events"]
-]
+    categories = [
+        ["cake-category.html", "Cakes"],
+        ["cookies-category.html", "Cookies"],
+        ["bread-category.html", "Bread"],
+        ["pie-category.html", "Pie"]
+    ]
+
+    navs = [
+        ["alternative-about-us.html", "About"],
+        ["contact.html", "Contact"],
+        ["submit-recipe.html", "Submit Recipes"],
+        ["calendar.html", "Calendar of Events"]
+    ]
+}
 
 document.writeln('<div class="container">');
 document.writeln('<header class="major">');
@@ -62,20 +94,37 @@ document.writeln('</header>');
 }
 
 function writeFooter(){
+let links;
 
-
-let links = [
-    ["index.html", "Home"],
-    ["alternative-about-us.html", "About Us"],
-    ["contact.html", "Contact Us"],
-    ["submit-recipe.html", "Submit a Recipe to be Featured"]
-]
+if(document.documentElement.lang == "fr") {
+    links = [
+        ["index.html", "Accueil"],
+        ["about-us-fr.html", "À Propos de Nous"],
+        ["contact.html", "Contactez Nous"],
+        ["submit-recipe.html", "Soumettre des Recettes"]
+    ];
+}
+else {
+    links = [
+        ["index.html", "Home"],
+        ["alternative-about-us.html", "About Us"],
+        ["contact.html", "Contact Us"],
+        ["submit-recipe.html", "Submit a Recipe to be Featured"]
+];
+}
 
 document.writeln('<footer class="minor">');
-document.writeln('<span id="message">Stay in touch...</span>');
-document.writeln('<form class="textBar" id="subscribeForm" action="subscribe-completed.html">');
-document.writeln('<input type="email" name="subscribe" id="subscribe" size="50" placeholder="address@example.com" required/>');
-document.writeln('<button type="submit" form="subscribeForm">Sign up</button>');
+if(document.documentElement.lang == "fr") { //Subscribe bar - French
+    document.writeln('<span id="message">Restez en contact...</span>'); 
+    document.writeln('<form class="textBar" id="subscribeForm" action="subscribe-completed.html">');
+    document.writeln('<input type="email" name="subscribe" id="subscribe" size="50" placeholder="adresse@exemple.com" required/>');
+    document.writeln('<button type="submit" form="subscribeForm">Inscrivez-vous</button>');
+} else { //Subscribe bar - English (default)
+    document.writeln('<span id="message">Stay in touch...</span>');
+    document.writeln('<form class="textBar" id="subscribeForm" action="subscribe-completed.html">');
+    document.writeln('<input type="email" name="subscribe" id="subscribe" size="50" placeholder="address@example.com" required/>');
+    document.writeln('<button type="submit" form="subscribeForm">Sign up</button>');
+}
 document.writeln('</form>');
 document.writeln('</footer>');
 document.writeln('<footer class="major">');
