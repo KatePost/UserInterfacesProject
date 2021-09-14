@@ -7,6 +7,9 @@ function getCalendar() {
     dayNames();
     dates(todayDate);
     document.write("</div>")
+
+    let day = todayDate.getDate();
+    return day;
 }
 
 function title(todayDate) {
@@ -49,7 +52,8 @@ function daysInMonth(todayDate) {
 function dates(todayDate) {
     currentDate = todayDate.getDate();
     days = daysInMonth(todayDate);
-    let weekDay = new Date(todayDate.setDate(1));
+    let weekDay = new Date(todayDate);
+    weekDay.setDate(1);
     weekDay = weekDay.getDay();
     for (let i = 0; i < weekDay; i++) {
         document.write("<div>&nbsp;</div>");
@@ -57,12 +61,25 @@ function dates(todayDate) {
     let dayCounter = 1
     while (dayCounter <= days) {
         if (dayCounter == currentDate) {
-            document.write("<div id='date" + dayCounter + "' class='calendar_date today'>" + dayCounter + "</div>");
+            document.write("<div id='date" + dayCounter + "' class='calendar_date green'>" + dayCounter + "</div>");
         }
         else {
             document.write("<div class='calendar_date' id='date" + dayCounter + "'>" + dayCounter + "</div>");
         }
         dayCounter++;
 
+    }
+}
+function linkDate(day) {
+    document.getElementById("date" + day).innerHTML = "<a href='alternative-about-us.html'>" + day + "</a>";
+}
+
+function makeEvent(day, link, thisClass){
+    let date = new Date(day);
+    let today = new Date();
+    if(date.getMonth() === today.getMonth()){
+        eventDate = date.getDate();
+        document.getElementById("date" + eventDate).classList.add(thisClass);
+        document.getElementById("date" + eventDate).innerHTML = "<a" + link + " >" + date.getDate() + "</a>";
     }
 }
