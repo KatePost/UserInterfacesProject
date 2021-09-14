@@ -55,7 +55,6 @@ socials = [
     ]
 }
 
-document.writeln('<div class="container">');
 document.writeln('<header class="major">');
 document.writeln('<a href="index.html">');
 document.writeln('<figure id="logo">');
