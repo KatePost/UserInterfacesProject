@@ -289,7 +289,7 @@ nav ul {
     left: 1em;
 }
 /*--*/
-
+/* collapsible menu */
 #menu-toggle-btn {
     display: block;
     float: right;
@@ -330,6 +330,7 @@ nav ul {
 .active {
     display: block !important;
 }
+/*--*/
 }
 /*---*/
 
