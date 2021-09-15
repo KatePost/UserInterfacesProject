@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src="scripts/headerFooter.js"></script>
+    <script src="scripts/timer.js" defer></script>
 </head>
 
 
 <body>
+    <audio id="sound" src="sounds/alert.wav" preload="auto"></audio>
     <div class="container">
         <script>writeHeader();</script>
         <main>
@@ -60,6 +62,22 @@
                             <li>optional: 1-2 drops red or pink food coloring</li>
                         </ul>
                     </aside>
+                    <aside id="timer">
+                        <p id="hour-label" class="label">Hours</p>
+                        <p id="min-label" class="label">Minutes</p>
+                        <p id="sec-label" class="label">Seconds</p>
+                        <input id="hour" type="number" max="99" min="0" value="00" class="time" onchange="leadingZeros(this)">
+                        <p id="p1" class="semicolon">:</p>
+                        <input id="minute" type="number" max="60" min="0" value="00" class="time" onchange="leadingZeros(this)">
+                        <p id="p2" class="semicolon">:</p>
+                        <input id="sec" type="number" max="99" min="0" value="00" class="time" onchange="leadingZeros(this)">
+                        <div id="timer_buttons">
+                            <button id="start" class="btn">Start</button>
+                            <button id="reset" class="btn">Reset</button>
+                            <button id="pause" class="btn">Pause</button>
+                        </div>
+                    </aside>
+
                 </aside>
                 <section id="text">
                     <h2>Instructions</h2>
@@ -91,6 +109,7 @@
                     </ol>
                 </section>
             </div>
+
 
             <section id="similar-recipes">
                 <h3>Similar Recipes</h3>
