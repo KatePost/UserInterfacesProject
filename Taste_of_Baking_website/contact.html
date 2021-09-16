@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="If you have feedback about our recipes or our website, please let us know. We are always striving to improve, and we welcome your help!" />
+    <meta name="description"
+        content="If you have feedback about our recipes or our website, please let us know. We are always striving to improve, and we welcome your help!" />
     <meta name="keywords" content="contact us, feedback, baking, recipe development" />
     <title>Contact Us | Taste of Baking</title>
     <link rel="stylesheet" href="styles/form-pages.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src="scripts/headerFooter.js"></script>
@@ -24,24 +26,32 @@
                 reach out to us by
                 responding here.<br /> You can also email us directly at <a
                     href="mailto:customerrelations@tasteofbaking.com">help@TOB.com</a></h3>
-            <form action="form-submit-contact.html" method="POST">
+            <form action="form-submit-contact.html" method="GET" id="contact-form" onsubmit="return validate();">
 
-                <div class="grid-container">
+                <div class="grid-container" id="form-box">
                     <div class="left"><label for="name">Your name:</label></div>
-                    <div><input class="form-input" id="name" type="text" size="30" maxlength="60" placeholder="Jane Smith"/></div>
-                    <div class="left"><label for="email" class="label">Your email address:</label></div>
-                    <div><input id="email" class="form-input" type="email" size="30" maxlength="40"  placeholder="address@example.com"></div>
+                    <div><input class="form-input" id="name" type="text" size="30" maxlength="60"
+                            placeholder="Jane Smith" /></div>
+                    <div class="left"><label for="email" class="label" id="email-label">Your email address:</label></div>
+                    <div><input id="email" class="form-input" type="email" size="30" maxlength="40"
+                            placeholder="address@example.com"></div>
                     <div class="left"><label for="category" class="label">Category:<sup>*</sup></label></div>
                     <div>
                         <select class="form-input" id="category" required>
                             <option value="" disabled selected>Select a category</option>
-                            <option value="question">Recipe Question</option>
-                            <option value="feedback">Recipe Feedback</option>
+                            <option value="question">Recipe</option>
                             <option value="comments">General Comments</option>
                             <option value="help">Site Help</option>
+                            <option value="events">Events and Classes</option>
                         </select>
                     </div>
-
+                    <div class="left hide">Feedback type:*</div>
+                    <div class="hide">
+                        <input type="radio" name="recipe-help" id="radio1">
+                        <label for="radio1" class="label">Help</label>
+                        <input type="radio" name="recipe-help" id="radio2">
+                        <label for="radio2">Feedback</label>
+                    </div>
                     <div class="left"><label for="description" class="label">Your message:<sup>*</sup></label></div>
                     <div><textarea class="form-input" name="description" id="description" cols="30" rows="10"
                             placeholder="type something..." maxlength="600" required></textarea></div>
@@ -57,6 +67,7 @@
         </main>
         <script>writeFooter();</script>
     </div>
+    <script src="scripts/feedback.js"></script>
 </body>
 
 </html>

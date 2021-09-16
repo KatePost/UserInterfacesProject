@@ -48,6 +48,10 @@ main{
 
 }
 
+.hide{
+    display: none;
+}
+
 .form-button{
     width: fit-content;
 }
