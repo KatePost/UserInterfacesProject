@@ -176,14 +176,18 @@ main a:hover{
 }
 
 .time {
-    width: 70%;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
 }
 
 
+.label {
+    text-align: center;
+}
 
  #hour-label {
     grid-area: 1 / 1 / 1 / 2;
-    width: 100%;
 
 }
 
@@ -241,7 +245,7 @@ main a:hover{
 
 .semicolon {
     align-self: center;
-    padding: auto 0.25em;
+    margin: auto 0.5em;
 
 }
 
