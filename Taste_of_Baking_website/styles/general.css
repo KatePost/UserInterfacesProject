@@ -186,14 +186,10 @@ nav li {
 .navbar a:hover{
     color: black;
     text-decoration: none;
-    background-color: #f7c6b5;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #e4d9d6;
 }
 
 .navbar a:active {
     color: gray;
-    background-color: antiquewhite;
 }
 
 nav {
@@ -267,6 +263,11 @@ nav ul {
 .lang.fr::before{
     content:"FR";
 }
+
+#menu-toggle-btn {
+    font-size: large;
+    display: none;
+}
 /*--*/
 /*---*/
 
@@ -275,7 +276,7 @@ nav ul {
 /* logo */
 #logo {
     height: 2em;
-    width: 100%;
+    width: 80%;
 }
 
 #logo img {
@@ -286,6 +287,48 @@ nav ul {
     position: relative;
     bottom: 80%;
     left: 1em;
+}
+/*--*/
+/* collapsible menu */
+#menu-toggle-btn {
+    display: block;
+    float: right;
+    padding: .5em;
+}
+
+.major nav.navbar{
+    display: none;
+    transition: all 2s ease;
+    width: fit-content;
+    text-align: right;
+    background-color: white;
+    box-shadow: 1px 1px 5px #0008;
+    border-radius: 2px;
+    position: fixed;
+    top: 4rem;
+    right: 2%;
+}
+
+.major nav.navbar ul{
+    list-style-type: none;
+    display: block;
+    padding: 0;
+}
+
+.major nav.navbar li {
+    display: block;
+
+}
+.major nav.navbar li:hover {
+    background-color: #f7c6b5;
+}
+
+.major nav.navbar li:active {
+    background-color: #80d6d2;
+}
+
+.active {
+    display: block !important;
 }
 /*--*/
 }
@@ -340,6 +383,16 @@ nav {
 
 .navbar li, .navbar a{
     padding: .75em 1em;
+}
+
+.navbar a:hover {
+    background-color: #f7c6b5;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #e4d9d6;
+}
+
+.navbar a:active {
+    background-color: #80d6d2;
 }
 
 #socialsNav {
