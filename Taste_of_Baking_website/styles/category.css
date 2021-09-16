@@ -44,6 +44,18 @@
     font-family: 'Merriweather';
     margin: 0 auto;
   }
+
+  .firstContainers {
+    margin: 0 auto;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Merriweather';
+    margin: 0 auto;
+  }
   
   /* Create four equal columns that sits next to each other */
   .column, .column1{
@@ -102,10 +114,15 @@
   
   .custom-select {
           background-color:  antiquewhite;
-          width: 100px;
+          color: #868268;
+          font-family: 'Merriweather';
+          font-size: 12pt;
+          text-align: center;
           border: none;
           box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
           border-radius: 5px;
+          width: 100%;
+          height: 30px;
       }
 
       #next-page {
