@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <script src="../scripts/headerFooter.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/collapsibleMenu.js" defer></script>
 
 
 </head>
@@ -14,13 +17,14 @@
     <div class="container">
     
     <header class="major">
+        <span id="menu-toggle-btn" class="fa fa-bars"></span>
         <a href="index.html">
             <figure id="logo">
-                <img src="images/minimal-logo-color-change.png" alt="Home | Taste of Baking Logo" />
+                <img src="../images/minimal-logo-color-change.png" alt="Home | Taste of Baking Logo" />
                 <figcaption>Taste of Baking</figcaption>
             </figure>
         </a>
-        <nav class="navbar">
+        <nav class="navbar" id="mainNav">
             <ul>
                 <li><a href="alternative-about-us.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -54,6 +58,8 @@
         </form>
     </header>
     <!-- main -->
+    <main></main>
+    <!-- main end -->
     <footer class="minor">
         <span id="message">Stay in touch...</span>
         <form class="textBar" id="subscribeForm" action="subscribe-completed.html" method="post">

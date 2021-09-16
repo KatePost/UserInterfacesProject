@@ -55,14 +55,16 @@ socials = [
     ]
 }
 
+document.writeln('<script src="scripts/collapsibleMenu.js" defer></script>');
 document.writeln('<header class="major">');
+document.writeln('<span id="menu-toggle-btn" class="fa fa-bars"></span>');
 document.writeln('<a href="index.html">');
 document.writeln('<figure id="logo">');
 document.writeln('<img src="images/minimal-logo-color-change.png" alt="Home | Taste of Baking Logo" />');
 document.writeln('<figcaption>Taste of Baking</figcaption>');
 document.writeln('</figure>');
 document.writeln('</a>');
-document.writeln('<nav class="navbar">');
+document.writeln('<nav class="navbar" id="mainNav">');
 document.writeln('<ul>');
 for(let nav of navs){
     document.writeln('<li><a href="' + nav[0] + '">' + nav[1] + "</a></li>");
@@ -135,3 +137,4 @@ document.writeln('</ul>');
 document.writeln('<div id="copyright"><span>copyright &copy; 2021</span></div>');
 document.writeln('</footer>');
 }
+
