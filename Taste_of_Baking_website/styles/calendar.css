@@ -97,3 +97,19 @@ p {
     grid-row-start: 5;
 }
 }
+
+#quote-container {
+    margin-top: 2em;
+}
+
+#quote-box {
+    border: solid 3px #868268;
+    padding: 2em;
+    border-radius: 5px;
+    background-color: #fafcf6; ;
+}
+
+#author {
+    text-align: center;
+    font-style: italic;
+}
