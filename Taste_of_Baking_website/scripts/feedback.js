@@ -2,15 +2,14 @@
 var categoryBox = document.getElementById("category");
 var resetBtn = document.getElementById("reset");
 var textBox = document.getElementById("description");
-
 let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
-var feedbackBool = false;
+var categoryBool = false;
 
 function validate() {
     var textBoxInputBool = textBoxInput();
     var recipeRadiosBool = recipeRadios();
     var filledEmailBool = filledEmail();
-    if (feedbackBool && textBoxInputBool && recipeRadiosBool && filledEmailBool) {
+    if (categoryBool && textBoxInputBool && recipeRadiosBool && filledEmailBool) {
         storeData();
         return true;
     }
@@ -31,21 +30,21 @@ function myreset() {
     document.getElementById("email-label").innerHTML = "Your email address:"
     recipeRadiosHidden = true;
     emailRequired = false;
-    feedbackBool = false;
+    categoryBool = false;
 }
 
-function feedback() {
+function category() {
     myreset();
 
     //recipe selected
     if (categoryBox.selectedIndex === 1) {
         $(".hide").css("display", "block");
         recipeRadiosHidden = false;
-        feedbackBool = true;
+        categoryBool = true;
     }
 
     else if (categoryBox.selectedIndex === 2) {
-        feedbackBool = true;
+        categoryBool = true;
     }
 
     //site help selected
@@ -53,11 +52,11 @@ function feedback() {
         document.getElementById("email").required = true;
         document.getElementById("email-label").innerHTML = "Your email address:*";
         emailRequired = true;
-        feedbackBool = true;
+        categoryBool = true;
     }
 
     else {
-        feedbackBool = false;
+        categoryBool = false;
     }
 }
 
@@ -95,4 +94,4 @@ function filledEmail() {
     return true;
 }
 
-categoryBox.addEventListener("change", feedback, false);
+categoryBox.addEventListener("change", category, false);
