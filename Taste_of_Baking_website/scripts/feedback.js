@@ -1,6 +1,6 @@
 
-window.addEventListener("load", location.reset, false);
 var categoryBox = document.getElementById("category");
+var resetBtn = document.getElementById("reset");
 var textBox = document.getElementById("description");
 var regexEmail = new RegExp('^[^\s@]+@[^\s@]+\.[^\s@]+$');
 var feedbackBool = false;
@@ -17,7 +17,7 @@ function validate() {
     return false;
 }
 
-function feedback() {
+function myreset(){
     //reset options
     $(".hide").css("display", "none");
     let radios = document.querySelectorAll("input[type='radio']");
@@ -30,11 +30,21 @@ function feedback() {
     document.getElementById("email-label").innerHTML = "Your email address:"
     recipeRadiosHidden = true;
     emailRequired = false;
+    feedbackBool = false;
+}
 
+function feedback() {
+    myreset();
+    
     //recipe selected
     if (categoryBox.selectedIndex === 1) {
         $(".hide").css("display", "block");
         recipeRadiosHidden = false;
+        feedbackBool = true;
+    }
+
+    else if(categoryBox.selectedIndex === 2){
+        feedbackBool = true;
     }
 
     //site help selected
@@ -42,9 +52,12 @@ function feedback() {
         document.getElementById("email").required = true;
         document.getElementById("email-label").innerHTML = "Your email address:*";
         emailRequired = true;
+        feedbackBool = true;
     }
 
-    feedbackBool = true;
+    else{
+        feedbackBool = false;
+    }
 }
 
 function textBoxInput() {
@@ -79,6 +92,7 @@ function filledEmail() {
     }
     return true;
 }
+
 
 
 categoryBox.addEventListener("change", feedback, false);
