@@ -285,5 +285,32 @@ main a:hover{
 
 }
 
+/* Comment box styling */
+/* #comments-box {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #fafcf6;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    padding: 2em;
+}
+
+/* #comment-box input, h2, textarea{
+    width: 100%;
+} */
+
+/* #comment-box button {
+    grid-row: 5 / 1;
+} */ 
+
+table, th, td {
+    border: thin solid;
+}
+
+
+
+
 
     

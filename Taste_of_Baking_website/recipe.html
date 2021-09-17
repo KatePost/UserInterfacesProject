@@ -16,6 +16,7 @@
     <script src="scripts/headerFooter.js"></script>
     <script src="scripts/timer.js" defer></script>
     <script src="scripts/ingredients.js" defer></script>
+    <script src="scripts/comments.js" defer></script>
 </head>
 
 
@@ -188,6 +189,26 @@
 
                 </div>
             </section>
+            <div id="comments-box" method="post">
+                <h3>Submit your comments</h3>
+                <form id="comments-form" method="POST">
+                        <label for="full_name">Your Name</label>
+                        <input type="text" name="full_name" id="full_name" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <textarea id="comment" name="comment" required></textarea>
+                        <button id="submit-btn" type="submit">Submit Comment</button>    
+                </form>
+            </div>
+            <table id="comments-table">
+                <caption style="caption-side: top;">Comments</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Timestamp</th>
+                    <th>Comment</th>
+                </tr>
+            </table>
+
             <div id="next-page">
                 <a href="recipe2.html">Next Page</a>
             </div>
