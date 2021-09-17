@@ -1,90 +1,102 @@
+let comments = [];
 
-// let comments = [];
+let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
+
+let nameInput;
+let emailInput;
+let commentInput;
+
 
 const addComment = (ev) => {
     ev.preventDefault();
 
-    // validateCommentsForm();
-
-    let thisDay= new Date();
-
-    timestamp = thisDay.toString().split(' ');
-    timestamp = timestamp.slice(1, 5).join(' ');
+    nameInput = document.getElementById("full_name").value;
+    emailInput = document.getElementById("email").value;
+    commentInput = document.getElementById("comment").value;
 
 
-    const comment = {
-        id: Date.now(),
-        date: timestamp,
-        userName: document.getElementById('full_name').value,
-        userEmail: document.getElementById('email').value,
-        userComment: document.getElementById('comment').value
+    // if (nameInput.trim().length === 0 || emailInput.trim().length === 0
+    //     || commentInput.trim().length === 0) {
+    //     alert("All fields require an input");
+    // }
+    // else if (commentInput.trim().length > 300) {
+    //     alert("Cannot exceed more than 300 characters");
+
+    // }
+    // else if (!(emailInput.match(emailCorrectPattern))) {
+    //     alert("Please correct email address");
+    //     document.getElementById('email').value = '';
+    // }
+
+    let validate = validateCommentsForm();
+
+    if(validate) {
+
+        let id = Date.now();
+
+        let thisDay = new Date();
+
+        timestamp = thisDay.toString().split(' ');
+        timestamp = timestamp.slice(1, 5).join(' ');
+
+        const comment = new Comment(id, timestamp, nameInput, emailInput, commentInput);
+
+        const commentJSON = JSON.stringify(comment);
+
+        comments.push(commentJSON);
+        console.log(comments);
+
+        let template;
+
+        template = '<tr><td>' + comment.userName + '</td>';
+        template += '<td>' + comment.timestamp + '</td>';
+        template += '<td>' + comment.userComment + '</td></tr>';
+
+        document.querySelector('table').innerHTML += template;
+
+        document.getElementById('full_name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('comment').value = '';
     }
-
-    let template;
-    
-    template = '<tr><td>' + comment.userName + '</td>';
-    template += '<td>' + comment.date + '</td>';
-    template += '<td>' + comment.userComment + '</td></tr>';
-    
-    document.querySelector('table').innerHTML += template;
-
-    document.getElementById('full_name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('comment').value = '';
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     document.getElementById('submit-btn').addEventListener('click', addComment);
-// });
 
 document.getElementById('submit-btn').addEventListener('click', addComment);
 
 
-function validateCommentsForm() {
-    let nameInput = document.getElementById("full_name");
-    let emailInput = document.getElementById("email");
-    let commentInput = document.getElementById("comment")
-
-    if (nameInput.value.length === 0) {
-        alert("Please enter your name");
-        nameInput.focus();
-        return false;
+class Comment {
+    constructor(id, timestamp, userName, userEmail, userComment) {
+        this.id = id;
+        this.timestamp = timestamp;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userComment = userComment;
     }
-
-    if (emailInput.value.length === 0) {
-        alert("Please enter your email address");
-        emailInput.focus();
-        return false;
-    } 
-
-    if (commentInput.value.length === 0) {
-        alert("Please enter a comment");
-        commentInput.focus();
-        return false;
-    } 
-
-    // var emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
-    // if (!(emailInput.match(emailCorrectPattern))) {
-    //     // debugger;
-    //     alert("Please correct email address");
-    //     email.value = '';
-
-    //     emailInput.focus();
-
-    //     // changes its background color to yellow
-    //     emailInput.style.backgroundColor = 'yellow';
-    //     return false;
-    // }
-    // emailInput.style.background = "white";
 }
 
 
 
+function validateCommentsForm() {
+    if (nameInput.trim().length === 0 || emailInput.trim().length === 0
+        || commentInput.trim().length === 0) {
+        alert("All fields require an input");
+        return false;
+    }
+    else if (commentInput.trim().length > 300) {
+        alert("Cannot exceed more than 300 characters");
+        return false;
+
+    }
+    else if (!(emailInput.match(emailCorrectPattern))) {
+        alert("Please correct email address");
+        document.getElementById('email').value = '';
+        return false;
+    }
+    else {
+        return true;
+    }
 
 
-// function Comment (id, userName, userEmail, userComment) {
-//     this.id = id;
-//     this.userName = userName;
-//     this.userEmail = userEmail;
-//     this.userComment = userComment;
-// }
+}
+
+

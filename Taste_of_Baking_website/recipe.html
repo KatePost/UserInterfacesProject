@@ -189,15 +189,15 @@
 
                 </div>
             </section>
-            <div id="comments-box" method="post">
+            <div id="comments-box">
                 <h3>Submit your comments</h3>
-                <form id="comments-form" method="POST">
+                <form name="comments-form" id="comments-form" method="POST"> 
                         <label for="full_name">Your Name</label>
                         <input type="text" name="full_name" id="full_name" required>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
-                        <textarea id="comment" name="comment" required></textarea>
-                        <button id="submit-btn" type="submit">Submit Comment</button>    
+                        <textarea id="comment" name="comment" max="300" required></textarea>
+                        <button id="submit-btn" type="submit" >Submit Comment</button>    
                 </form>
             </div>
             <table id="comments-table">
