@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src="scripts/headerFooter.js"></script>
+    <script src="scripts/submitRecipe.js" defer></script>
 
 </head>
 
@@ -25,7 +26,7 @@
             <h3 class="page-head">Thank you for your interest in contributing to our recipes!<br />Please fill out the
                 form
                 below.</h3>
-            <form action="form-submit-recipe.html" method="POST">
+            <form action="form-submit-recipe.html" method="POST" onsubmit="return validate();" onreset="myreset();">
                 <div class="grid-container">
                     <div class="left"><label for="category" class="label">Category:<sup>*</sup></label></div>
                     <div>
@@ -52,8 +53,8 @@
                     <div class="left"><label for="file" class="label">Upload the recipe here:<sup>*</sup></label>
                     </div>
                     <div><input class="form-input" id="file" type="file" required /></div>
-                    <div class="check"><input id="name-agree" type="checkbox" required>
-                        <label for="name-agree">By checking this box you agree to our <a href="#">Terms and
+                    <div class="check"><input id="terms-agree" type="checkbox" required>
+                        <label for="terms-agree">By checking this box you agree to our <a href="#">Terms and
                                 Conditions</a><sup>*</sup></label>
                     </div>
                     <div class="check">

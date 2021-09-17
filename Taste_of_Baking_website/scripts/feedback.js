@@ -30,6 +30,7 @@ function myreset(){
     document.getElementById("email-label").innerHTML = "Your email address:"
     recipeRadiosHidden = true;
     emailRequired = false;
+    feedbackBool = false;
 }
 
 function feedback() {
@@ -52,7 +53,11 @@ function feedback() {
         document.getElementById("email-label").innerHTML = "Your email address:*";
         emailRequired = true;
         feedbackBool = true;
-    } 
+    }
+
+    else{
+        feedbackBool = false;
+    }
 }
 
 function textBoxInput() {
