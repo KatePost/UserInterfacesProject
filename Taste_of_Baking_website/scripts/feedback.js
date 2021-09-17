@@ -4,6 +4,7 @@ var resetBtn = document.getElementById("reset");
 var textBox = document.getElementById("description");
 let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
 var categoryBool = false;
+var feedbackForms = JSON.parse(localStorage.getItem('responses')) || [];
 
 function validate() {
     var textBoxInputBool = textBoxInput();
@@ -15,6 +16,24 @@ function validate() {
     }
     window.alert("Please fill all required fields. Fields marked with * are required.");
     return false;
+}
+
+
+
+function storeData() {
+    let filledResponse = {
+        respondantsName: document.getElementById('name').value,
+        email: document.getElementById("email").value,
+        category: document.getElementById("category").value,
+        recipeHelp: document.getElementById("radio1").checked,
+        recipeFeedback: document.getElementById("radio2").checked,
+        content: document.getElementById("description").value
+    };
+
+    feedbackForms.push(filledResponse);
+    console.warn('added', { feedbackForms });
+    localStorage.setItem('responses', JSON.stringify(feedbackForms));
+
 }
 
 function myreset() {

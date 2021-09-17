@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src="scripts/headerFooter.js"></script>
+    <script src="scripts/formSubmitContact.js" defer></script>
 
 
 </head>
@@ -24,9 +25,14 @@
         <script>writeHeader();</script>
         <main>
             <h1 class="title">Thank you for your submission!</h1>
-            <h3 class="page-head">If you left your contact information we may reach out to you to follow up.<br /> Otherwise,
-                we
-                appreciate you taking the time to let us know how we're doing.</h3>
+            <h3 class="page-head" id="thank-you">We will review your message and if required, we will follow up with you
+                via the email address you submitted below.</h3>
+
+            <div id="responses">
+                <h2>
+                    Your information:
+                </h2>
+            </div>
         </main>
         <script>writeFooter();</script>
     </div>
