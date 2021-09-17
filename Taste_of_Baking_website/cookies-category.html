@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="icon" href="images/favicon.ico" type="image/ico"/> 
+    <script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+    <script type="text/javascript" src="scripts/category.js"></script>
     <script src="scripts/headerFooter.js"></script>
   </head>
   <body>
@@ -22,75 +24,77 @@
                     <div class="heading">
                         <h1 >Cookies </h1>
                     </div>
-                    <div class = "containers">
-                      <div class="column1" >
-                        <select class="custom-select" id="diet">
-                            <option value="" disabled selected>
-                                Diet
-                            </option>
-                            <option value="low sugar">
-                                Low Sugar
-                            </option>
-                            <option value="gluten free">
-                                Gluten Free
-                            </option>
-                            <option value="vegan">
-                                Vegan
-                            </option>
-                            <option value="low calorie">
-                                Low Calorie
-                            </option>
-                        </select>
-                    </div>
+                    <div class = "firstContainers">
+                       <div class="column1" >
+                            <select class="custom-select" id="diet">
+                                <option value="all">
+                                    Diet
+                                </option>
+                                <option value="low_sugar">
+                                    Low Sugar
+                                </option>
+                                <option value="gluten_free">
+                                    Gluten Free
+                                </option>
+                                <option value="vegan">
+                                    Vegan
+                                </option>
+                                <option value="low_calorie">
+                                    Low Calorie
+                                </option>
+                            </select>
+                        </div>
                     <div class="column1">&nbsp;</div>
                     <div class="column1"> &nbsp;</div>
                     <div class="column1">
                         <select class="custom-select" id="sort_by">
-                            <option value="" disabled selected>
+                            <option value="all" disabled selected>
                                 Sort By
                             </option>
                             <option value="date">
                                 Date Added
                             </option>
-                            <option value="view">
-                                View
-                            </option>
                             <option value="difficulty">
                                 Difficulty
                             </option>
                         </select>
-                          </div>
-
-                      <div class="column"><a href="recipe.html"><img src="images/chocolateChipCookies.jpg" alt ="chocolate Chip Cookies"/></a><a href="recipe.html"><h4>Chocolate Chip Cookies</h4></a>
-                        <small>Difficulty: <br><span class="fa fa-star checked"></span>
+                    </div>
+                    </div>
+                    <div class="containers"> 
+                      <div class="column all vegan" data-event-date="30/06/2009" data-rate="1"><a href="recipe.html"><img src="images/chocolateChipCookies.jpg" alt ="chocolate Chip Cookies"/></a><a href="recipe.html"><h4>Chocolate Chip Cookies</h4></a>
+                        <small>Difficulty: <br>
+                            <span class="fa fa-star checked"></span>
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                         </small></div>
-                      <div class="column"><a href="recipe.html"><img src="images/RedVelvetCookie.jpg" alt ="Red Velvet Cookie"/></a><a href="recipe.html"><h4>Red Velvet Cookie</h4></a>
-                        <small>Difficulty: <br><span class="fa fa-star checked"></span>
+                      <div class="column all low_calorie" data-event-date="30/06/2013" data-rate="2"><a href="recipe.html"><img src="images/RedVelvetCookie.jpg" alt ="Red Velvet Cookie"/></a><a href="recipe.html"><h4>Red Velvet Cookie</h4></a>
+                        <small>Difficulty: <br>
+                            <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                             <span class="fa fa-star "></span>
                         </small></div>
-                      <div class="column"><a href="recipe.html"><img src="images/DietCookie.jpg" alt ="Diet Cookie"/></a><a href="recipe.html"><h4>Diet Cookie</h4></a>
-                        <small>Difficulty: <br><span class="fa fa-star checked"></span>
+                      <div class="column all gluten_free" data-event-date="30/06/2017" data-rate="5"><a href="recipe.html"><img src="images/DietCookie.jpg" alt ="Diet Cookie"/></a><a href="recipe.html"><h4>Diet Cookie</h4></a>
+                        <small>Difficulty: <br>
+                            <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                         </small></div>
-                      <div class="column"><a href="recipe.html"><img src="images/SweetFruitPieCookie.jpg" alt ="Sweet Fruit Pie Cookie"/></a><a href="recipe.html"><h4>Sweet Fruit Pie Cookie</h4></a>
-                        <small>Difficulty: <br><span class="fa fa-star checked"></span>
+                      <div class="column all low_calorie" data-event-date="30/06/2020" data-rate="4"><a href="recipe.html"><img src="images/SweetFruitPieCookie.jpg" alt ="Sweet Fruit Pie Cookie"/></a><a href="recipe.html"><h4>Sweet Fruit Pie Cookie</h4></a>
+                        <small>Difficulty: <br>
+                            <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star "></span>
                         </small></div>
                   </div>
-                  </div>
+                </div>
                   <div id="next-page">
                     <a href="#">Next Page</a>
                 </div>

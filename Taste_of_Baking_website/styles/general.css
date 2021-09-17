@@ -18,10 +18,17 @@
 
 /* for all screen sizes */
 /* containers */
+html{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     color: #555;
     font-family: 'Merriweather', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -107,7 +114,7 @@ button:active, input[type="submit"]:active, input[type="reset"]:active {
 header, footer {
     font-family: 'Merriweather';
     box-shadow: 1px 1px 5px lightgrey;
-    padding: 0;
+    padding: 3px;
 }
 
 header.major {

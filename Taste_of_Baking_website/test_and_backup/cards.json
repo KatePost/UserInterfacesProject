@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Pink Party Strawberry Cake",
+        "href": "recipe.html",
+        "image": "pink_champagne_cake.jpg",
+        "difficulty": 5
+    },
+    {
+        "name": "Kit-Kat Cake",
+        "href": "recipe.html",
+        "image": "kitkat_cake.jpg",
+        "difficulty": 4
+    },
+    {
+        "name": "Strawberry Cake",
+        "href": "recipe.html",
+        "image": "strawberryCake.jpg",
+        "difficulty": 3
+    },
+    {
+        "name": "Chocolate Cup Cake",
+        "href": "recipe.html",
+        "image": "cupcake.jpg",
+        "difficulty": 1
+    },
+    {
+        "name": "Cheese Cake with Chocolate Base Cake",
+        "href": "recipe.html",
+        "image": "cheesecake1.jpg",
+        "difficulty": 3
+    },
+    {
+        "name": "Carrot &amp; Walnut Cake",
+        "href": "recipe.html",
+        "image": "carrotcake1.jpg",
+        "difficulty": 4
+    },
+    {
+        "name": "Pistachio &amp; Hazelnut Cake",
+        "href": "recipe.html",
+        "image": "pistachio_hazelnut_cake.jpg",
+        "difficulty": 5
+    },
+    {
+        "name": "Easy Pumpkin Cake Recipe",
+        "href": "recipe.html",
+        "image": "EasyPumpkinRecipe.jpg",
+        "difficulty": 2
+    }
+]
