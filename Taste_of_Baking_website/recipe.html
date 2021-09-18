@@ -189,25 +189,33 @@
 
                 </div>
             </section>
+            <div id="comment-section">
             <div id="comments-box">
                 <h3>Submit your comments</h3>
                 <form name="comments-form" id="comments-form" method="POST"> 
                         <label for="full_name">Your Name</label>
                         <input type="text" name="full_name" id="full_name" required>
+                        <br />
                         <label for="email">Email</label>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                         <input type="email" name="email" id="email" required>
-                        <textarea id="comment" name="comment" max="300" required></textarea>
+                        <br/>
+                        <textarea id="comment" name="comment" max="300" required rows="5" cols="33"></textarea>
+                        <br />
                         <button id="submit-btn" type="submit" >Submit Comment</button>    
                 </form>
             </div>
+            <div>
             <table id="comments-table">
-                <caption style="caption-side: top;">Comments</caption>
+                <caption id ="table-caption" style="caption-side: top;">Comments</caption>
                 <tr>
                     <th>Name</th>
                     <th>Timestamp</th>
                     <th>Comment</th>
                 </tr>
             </table>
+        </div>
+        </div>
 
             <div id="next-page">
                 <a href="recipe2.html">Next Page</a>

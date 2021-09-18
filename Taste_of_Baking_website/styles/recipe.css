@@ -306,11 +306,57 @@ main a:hover{
 } */ 
 
 table, th, td {
-    border: thin solid;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    padding: 1em;
 }
 
+#full_name{
+    margin: 5px;
+    width: 50%;
+}
+#email{
+    margin: 5px;
+    width: 50%;
+}
+textarea{
+    margin-top: 10px;
+    width: 80%;
+}
+#table-caption{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+#comment-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+table{
+    padding-top: 20px;
+    background-color:#fafcf6;
+    border: solid 3px #868268;
+    margin: 0 auto;
+}
+th{
+    background-color: #dfdab4 ;
+}
+tr{
+    background-color: #ffffff;
+    border: 2px #b8b284 solid;
+}
 
-
-
-
+#submit-btn{
+    margin-top: 0.7em;
+    width: fir-content;
+    font-size: small;
     
+}
+
+@media only screen and (min-width: 600px) {
+    #comment-section{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 1.5rem;
+    }
+}

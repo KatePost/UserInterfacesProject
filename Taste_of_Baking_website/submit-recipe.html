@@ -15,7 +15,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <script src="scripts/headerFooter.js"></script>
     <script src="scripts/submitRecipe.js" defer></script>
-
+    <!--<script src="submit-recipe-localStorage.js" defer></script>-->
+    
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             <h3 class="page-head">Thank you for your interest in contributing to our recipes!<br />Please fill out the
                 form
                 below.</h3>
-            <form action="form-submit-recipe.html" method="POST" onsubmit="return validate();" onreset="myreset();">
+            <form id= "submit-recipe-form" action="form-submit-recipe.html" method="POST" onsubmit="return validate();" onreset="myreset();">
                 <div class="grid-container">
                     <div class="left"><label for="category" class="label">Category:<sup>*</sup></label></div>
                     <div>
@@ -52,7 +53,7 @@
                             placeholder="type something..." maxlength="300"></textarea></div>
                     <div class="left"><label for="file" class="label">Upload the recipe here:<sup>*</sup></label>
                     </div>
-                    <div><input class="form-input" id="file" type="file" required /></div>
+                    <div><input class="form-input" id="file" type="file" name="file" required /></div>
                     <div class="check"><input id="terms-agree" type="checkbox" required>
                         <label for="terms-agree">By checking this box you agree to our <a href="#">Terms and
                                 Conditions</a><sup>*</sup></label>

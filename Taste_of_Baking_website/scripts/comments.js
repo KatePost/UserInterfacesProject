@@ -42,6 +42,7 @@ const addComment = (ev) => {
         const comment = new Comment(id, timestamp, nameInput, emailInput, commentInput);
 
         const commentJSON = JSON.stringify(comment);
+        localStorage.setItem(id,commentJSON);
 
         comments.push(commentJSON);
         console.log(comments);
