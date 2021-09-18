@@ -158,7 +158,7 @@ header a:active, footer a:active {
 /*--*/
 /* logo */
 #logo {
-    width: 20%;
+    /*width: 20%;*/
     max-width: fit-content;
     justify-self: start;
     margin: 0;
@@ -166,18 +166,9 @@ header a:active, footer a:active {
 }
 
 #logo img {
-    max-height: 100%;
-    transform: scaleX(-1);
+    /*max-height: 100%;
+    transform: scaleX(-1);*/
     padding: 0;
-}
-
-#logo figcaption {
-    color: #eba48d;
-    font-family: 'Vegan', Luminari, 'Brush Script MT', 'Bradley Hand';
-    font-size: 18pt;
-    position: absolute;
-    left: 0;
-    margin: 0;
 }
 /*--*/
 /* nav */
@@ -295,6 +286,11 @@ nav ul {
     bottom: 80%;
     left: 1em;
 }
+
+#bigLogo{
+    display: none;
+}
+
 /*--*/
 /* collapsible menu */
 #menu-toggle-btn {
@@ -370,14 +366,20 @@ footer.minor {
 }
 
 #logo img {
-    position: absolute;
+    height: 115%;
+    /*position: absolute;
     left: 3.5em;
-    height: 4.75em;
+    height: 4.75em;*/
 }
 
 #logo figcaption {
     bottom: 0;
 }
+
+#smallLogo{
+    display: none;
+}
+
 /*--*/
 /* nav */
 nav {

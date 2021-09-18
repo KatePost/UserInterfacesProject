@@ -51,7 +51,7 @@ function startTimer(totalSeconds) {
         if (totalSeconds <= 0) {
             interval = clearInterval(interval);
             document.getElementById('sound').play();
-            alert("Timer is done!");
+            alert("Timer is done!")
         }
     }, 1000)
 }
