@@ -1,63 +1,46 @@
 
-const strawberryCake = [2.5, 2, 0.5, 1, 0.75, 1.75, 5, 0.33, 2, 0.5, 0.5, 2];
-var proportion = document.getElementById("proportion");
-var newQuantities = [];
-var ingredients = document.querySelectorAll("#ingredients ul li span");
+var recipeQuantities = [];
+
 var myList = document.querySelectorAll("#ingredients ul li");
-const originalRecipe = [];
-var servings = document.querySelector('ul li #servings');
-const originalServings = servings.innerHTML;
 
 for (let i = 0; i < myList.length; i++) {
-    originalRecipe[i] = myList[i].innerHTML;
+    let mySplit = myList[i].innerHTML.split(" ");
+    recipeQuantities[i] = parseFloat(mySplit[0]);
 }
 
-
-function updateRecipe (array) {
+function updateRecipe() {
+    let newQuantities = [];
     var amount = proportion.options[proportion.selectedIndex].value;
-    
+
+
     if (amount == '2') {
-        newQuantities = array.map(x => x * 2);
-        updateQuantities();
+        newQuantities = recipeQuantities.map(x => x * 2);
+
     }
     else if (amount == '0.5') {
-        newQuantities = array.map(x => x * 0.5);
-        updateQuantities();
+        newQuantities = recipeQuantities.map(x => x * 0.5);
+
     }
     else {
-        for (let i = 0; i < myList.length; i++) {
-            myList[i].innerHTML = originalRecipe[i];
-        }
+        newQuantities = recipeQuantities;
     }
-}
 
-function updateQuantities() {
-    for (let i = 0; i < ingredients.length; i++) {
-        let mySplit = ingredients[i].innerHTML.split(" ");
-        let number = newQuantities[i];
+    console.log(recipeQuantities);
+
+
+    for (let i = 0; i < myList.length; i++) {
+        let mySplit = myList[i].innerHTML.split(" ");
+        let number = newQuantities[i]
         if (number.toString().length > 3) {
             number = number.toFixed(2);
         }
-        let quantity = [number];
-        let newIngredient = quantity.concat(mySplit).join(" ");
-        myList[i].innerHTML = newIngredient;   
+        mySplit[0] = number;
+        let ingredient = mySplit.join(" ");
+        myList[i].innerHTML = ingredient;
     }
-}
+};
 
-function updateServings() {
-    var amount = proportion.options[proportion.selectedIndex].value;
-    
 
-    if (amount == '2') {
-        servings.innerHTML = originalServings * 2;
 
-    }
-    else if (amount == '0.5') {
-        servings.innerHTML = originalServings * 0.5;
 
-    }
-    else {
-        servings.innerHTML = originalServings;
 
-    }
-}
