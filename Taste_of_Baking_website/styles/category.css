@@ -61,7 +61,7 @@
   .column, .column1{
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
-    max-width: 25%;
+    /*max-width: 25%;*/
     padding: 0 15px;
     
   }
