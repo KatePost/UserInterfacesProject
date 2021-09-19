@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-var gluten_free = $('.gluten_free');
-var vegan = $('.vegan');
-var low_sugar = $('.low_sugar');
-var low_calorie = $('.low_calorie');
+//var gluten_free = $('.gluten_free');
+//var vegan = $('.vegan');
+//var low_sugar = $('.low_sugar');
+//var low_calorie = $('.low_calorie');
 
 $('#diet').change( function() {
     if($(this).val() == 'low_sugar'){

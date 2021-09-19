@@ -1,13 +1,11 @@
 var comments =JSON.parse(localStorage.getItem('newComment')) || [];
 
 let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
-
+let timestamp;
 let nameInput;
 let emailInput;
 let commentInput;
-//let recipeId = document.getElementById("recipe_01").id;
 let recipeId;
-
 recipeId = document.getElementsByClassName("recipe")[0].id;
 
 const addComment = (ev) => {
@@ -62,7 +60,7 @@ const addComment = (ev) => {
         document.getElementById('email').value = '';
         document.getElementById('comment').value = '';
     }
-}
+};
 
 
 document.getElementById('submit-btn').addEventListener('click', addComment);
