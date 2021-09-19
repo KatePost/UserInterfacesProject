@@ -7,7 +7,8 @@ var m = document.getElementById('minute');
 var s = document.getElementById('sec');
 
 var interval;
- 
+
+startBtn.disabled = false;
 
 startBtn.addEventListener('click', function () {
     var hoursInt = parseInt(h.value);
@@ -25,6 +26,7 @@ startBtn.addEventListener('click', function () {
 
         startTimer(totalSeconds);
         startBtn.innerText = 'Start';
+        startBtn.disabled = true;
     }
 
 })
@@ -35,12 +37,14 @@ reset.addEventListener('click', function() {
     s.value = '00';
     stopTimer();
     startBtn.innerText = 'Start';
+    startBtn.disabled = false;
 
 });
 
 pauseBtn.addEventListener('click', function () {
     stopTimer();
     startBtn.innerText = 'Resume';
+    startBtn.disabled = false;
 
 })
 
@@ -52,6 +56,7 @@ function startTimer(totalSeconds) {
             interval = clearInterval(interval);
             document.getElementById('sound').play();
             alert("Timer is done!")
+            startBtn.disabled = false;
         }
     }, 1000)
 }
@@ -86,6 +91,8 @@ function leadingZeros(input) {
       input.value = '0' + input.value;
     }
   }
+
+
 
 
 
