@@ -7,12 +7,8 @@ var authorAgree = document.getElementById("author-rights");
 let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
 var file = document.getElementById("file");
 var description= document.getElementById("description");
-
-
+var formInput =JSON.parse(localStorage.getItem('submitRecipe')) || [];
 let id = Date.now();
-//let comments =[];
-
-
 
 function myreset() {
     category.value = "";
@@ -28,7 +24,6 @@ function validate() {
     if (category.value != "" && cName.value != "" && email.value != "" && title.value != "" && termsAgree.checked && authorAgree.checked) {
         if (emailMatch) {
             
-            let formInput = [];
             id = Date.now();
             
             class RecipeForm {
@@ -46,12 +41,11 @@ function validate() {
             }
             
             const recipeForm = new RecipeForm(id, category, cName, email, title,file,description,termsAgree,authorAgree);
+            formInput.push(recipeForm);
+            localStorage.setItem('submitRecipe',JSON.stringify(formInput));
             
-            const recipeFormJSON = JSON.stringify(recipeForm);
-            localStorage.setItem(id,recipeFormJSON);
-            formInput.push(recipeFormJSON);
-            window.alert("find it");
-            console.log(formInput);
+            //window.alert("find it");
+            //console.log(formInput);
             
             /* formInput= [categorys, cNames, emails, titles,files];
             const formJSON = JSON.stringify(formInput);

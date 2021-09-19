@@ -360,3 +360,8 @@ tr{
         gap: 1.5rem;
     }
 }
+
+#table-div {
+    height: 700px;
+    overflow: auto;
+}
