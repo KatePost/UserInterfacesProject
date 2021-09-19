@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enjoy Baking different type pf cakes by Tast of baking. Here, you are provided with recipes of cakes for different diets such as gluten free, low sugar, vegan and so on">
+    <meta name="description"
+        content="Enjoy Baking different type pf cakes by Tast of baking. Here, you are provided with recipes of cakes for different diets such as gluten free, low sugar, vegan and so on">
     <meta name="keywords" content="Recipe, cookies, cake, pie, bread, baking, bakery, tasty, Taste of baking ">
-    <title>Cake | Taste of Baking</title>
+    <title>Pie | Taste of Baking</title>
     <link rel="stylesheet" href="../styles/category.css" />
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="../images/favicon.ico" type="../image/ico">
     <script src="../scripts/headerFooter.js"></script>
-    <script src="cards.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+    <script src="cards.js" async></script>
 </head>
 
 <body>
@@ -22,40 +24,37 @@
             <div class="main-category">
                 <div class="cake-category">
                     <div class="heading">
-                        <h1>Cakes</h1>
+                        <h1>All Recipes <br /> (for testing purposes)</h1>
                     </div>
-                    <div class="containers">
-                        <div class="column1">
+                    <div class="firstContainers">
+                        <div class=" column1">
                             <select class="custom-select" id="diet">
-                                <option value="" disabled selected>
-                                    Diet
+                                <option value="all">
+                                    All
                                 </option>
-                                <option value="low sugar">
+                                <option value="low_sugar">
                                     Low Sugar
                                 </option>
-                                <option value="gluten free">
+                                <option value="gluten_free">
                                     Gluten Free
                                 </option>
                                 <option value="vegan">
                                     Vegan
                                 </option>
-                                <option value="low calorie">
+                                <option value="low_calorie">
                                     Low Calorie
                                 </option>
                             </select>
                         </div>
                         <div class="column1">&nbsp;</div>
-                        <div class="column1"> &nbsp;</div>
+                        <div class="column1">&nbsp;</div>
                         <div class="column1">
                             <select class="custom-select" id="sort_by">
-                                <option value="" disabled selected>
+                                <option value="all" disabled selected>
                                     Sort By
                                 </option>
                                 <option value="date">
                                     Date Added
-                                </option>
-                                <option value="view">
-                                    View
                                 </option>
                                 <option value="difficulty">
                                     Difficulty
@@ -63,12 +62,12 @@
                             </select>
                         </div>
                     </div>
-                
-            </div>
-                <div id="next-page">
-                    <a href="#">Next Page</a>
+                    <div class="containers"></div>
                 </div>
-              </div>
+            </div>
+            <div id="next-page">
+                <a href="#">Next Page</a>
+            </div>
         </main>
         <script>writeFooter();</script>
     </div>
