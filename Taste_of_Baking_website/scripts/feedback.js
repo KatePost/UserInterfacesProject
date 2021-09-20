@@ -27,7 +27,8 @@ function storeData() {
         category: document.getElementById("category").value,
         recipeHelp: document.getElementById("radio1").checked,
         recipeFeedback: document.getElementById("radio2").checked,
-        content: document.getElementById("description").value
+        content: document.getElementById("description").value,
+        ranking: document.getElementById("ranking").value
     };
 
     feedbackForms.push(filledResponse);

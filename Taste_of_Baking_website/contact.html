@@ -29,7 +29,8 @@
                 reach out to us by
                 responding here.<br /> You can also email us directly at <a
                     href="mailto:customerrelations@tasteofbaking.com">help@TOB.com</a></h3>
-            <form action="form-submit-contact.html" method="GET" id="contact-form" onsubmit="return validate();" onreset="myreset();">
+            <form action="form-submit-contact.html" method="GET" id="contact-form" onsubmit="return validate();"
+                onreset="myreset();">
 
                 <div class="grid-container" id="form-box">
                     <div class="left"><label for="name">Your name:</label></div>
@@ -59,6 +60,14 @@
                     <div class="left"><label for="description" class="label">Your message:<sup>*</sup></label></div>
                     <div><textarea class="form-input" name="Message" id="description" cols="30" rows="10"
                             placeholder="type something..." maxlength="600" required></textarea></div>
+                    <div class="left"><label for="ranking" class="label">Overall, how are you enjoying our site?<sup>*</sup></label></div>
+                    <select class="form-input" id="ranking" name="Ranking" required>
+                        <option value="" disabled selected>Select a response</option>
+                        <option value="Great">Love it! No complaints!</option>
+                        <option value="Good">Enjoying it! Some small feedback.</option>
+                        <option value="Neutral">It's okay. Some things are not my favorite.</option>
+                        <option value="Bad">I really don't like to use this site.</option>
+                    </select>
                     <div><input id="reset" class="form-button" type="reset" value="Reset form" />
                     </div>
                     <div class="centered"><input class="form-button" type="submit" id="submit"
