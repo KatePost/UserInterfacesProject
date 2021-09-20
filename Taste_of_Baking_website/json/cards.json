@@ -10,7 +10,7 @@
     },
     {
         "name": "Kit-Kat Cake",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "kitkat_cake.jpg",
         "difficulty": 4,
         "category": "cake",
@@ -28,7 +28,7 @@
     },
     {
         "name": "Chocolate Cup Cake",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "cupcake.jpg",
         "difficulty": 1,
         "category": "cake",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Cheese Cake with Chocolate Base Cake",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "cheesecake1.jpg",
         "difficulty": 3,
         "category": "cake",
@@ -46,7 +46,7 @@
     },
     {
         "name": "Carrot &amp; Walnut Cake",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "carrotcake1.jpg",
         "difficulty": 4,
         "category": "cake",
@@ -55,7 +55,7 @@
     },
     {
         "name": "Pistachio &amp; Hazelnut Cake",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "pistachio_hazelnut_cake.jpg",
         "difficulty": 5,
         "category": "cake",
@@ -73,7 +73,7 @@
     },
     {
         "name": "Baguette",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "bread1.jpg",
         "difficulty": 3,
         "category": "bread",
@@ -82,7 +82,7 @@
     },
     {
         "name": "Wheat Bread",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "WheatBread.jpg",
         "difficulty": 3,
         "category": "bread",
@@ -100,7 +100,7 @@
     },
     {
         "name": "Cinnamon Raisin Bread",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "CinnamonRaisinBread.jpg",
         "difficulty": 4,
         "category": "bread",
@@ -109,7 +109,7 @@
     },
     {
         "name": "Apple Cinnamon Bread",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "AppleCinnamonBread.jpg",
         "difficulty": 3,
         "category": "bread",
@@ -127,7 +127,7 @@
     },
     {
         "name": "Walnut Cranberry Bread",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "walnutCramberryBread.jpg",
         "difficulty": 4,
         "category": "bread",
@@ -136,7 +136,7 @@
     },
     {
         "name": "Chocolatine",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "chocolatine.jpg",
         "difficulty": 4,
         "category": "bread",
@@ -145,7 +145,7 @@
     },
     {
         "name": "Chocolate Chip Cookies",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "chocolateChipCookies.jpg",
         "difficulty": 1,
         "category": "cookies",
@@ -154,7 +154,7 @@
     },
     {
         "name": "Red Velvet Cookie",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "RedVelvetCookie.jpg",
         "difficulty": 2,
         "category": "cookies",
@@ -163,7 +163,7 @@
     },
     {
         "name": "Diet Cookie",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "DietCookie.jpg",
         "difficulty": 5,
         "category": "cookies",
@@ -181,7 +181,7 @@
     },
     {
         "name": "Berries Pie",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "mix_berries_pie2.jpg",
         "difficulty": 2,
         "category": "pie",
@@ -199,7 +199,7 @@
     },
     {
         "name": "Apple Pie",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "apple_pie2.jpg",
         "difficulty": 0,
         "category": "pie",
@@ -208,7 +208,7 @@
     },
     {
         "name": "Walnut Pie",
-        "href": "recipe.html",
+        "href": "recipe2.html",
         "image": "walnut.jpg",
         "difficulty": 4,
         "category": "pie",
@@ -217,7 +217,7 @@
     },
     {
         "name": "Blackberry Pie",
-        "href": "recipe.html",
+        "href": "recipe3.html",
         "image": "BlackberryPie.jpg",
         "difficulty": 3,
         "category": "pie",
