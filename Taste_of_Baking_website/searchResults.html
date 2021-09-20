@@ -21,10 +21,48 @@
     <script>writeHeader();</script>
         <main>
             <div class ="main-category">
-                <div class="heading">
-                    <h1>Search Results</h1>
+                <div class="cake-category">
+                    <div class="heading">
+                        <h1>Search Results</h1>
+                    </div>
+                    <div class = "firstContainers">
+                        <div class="column1" >
+                          <select class="custom-select" id="diet">
+                              <option value="all">
+                                  Diet
+                              </option>
+                              <option value="low_sugar">
+                                  Low Sugar
+                              </option>
+                              <option value="gluten_free">
+                                  Gluten Free
+                              </option>
+                              <option value="vegan">
+                                  Vegan
+                              </option>
+                              <option value="low_calorie">
+                                  Low Calorie
+                              </option>
+                          </select>
+                      </div>
+                      <div class="column1">&nbsp;</div>
+                      <div class="column1"> &nbsp;</div>
+                      <div class="column1">
+                          <select class="custom-select" id="sort_by">
+                              <option value="all" disabled selected>
+                                  Sort By
+                              </option>
+                              <option value="date">
+                                  Date Added
+                              </option>
+                              <option value="difficulty">
+                                  Difficulty
+                              </option>
+                          </select>
+                      </div>
+                  </div>  
+                    <div class="containers"></div>
                 </div>
-                <div class="containers"></div>
             </div>
         </main>
     <script>writeFooter()</script>
