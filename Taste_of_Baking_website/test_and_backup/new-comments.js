@@ -1,11 +1,11 @@
 var comments =JSON.parse(localStorage.getItem('newComment')) || [];
+
 let emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
+let timestamp;
 let nameInput;
 let emailInput;
 let commentInput;
 let recipeId;
-let timestamp;
-
 recipeId = document.getElementsByClassName("recipe")[0].id;
 
 const addComment = (ev) => {
@@ -13,12 +13,27 @@ const addComment = (ev) => {
     nameInput = document.getElementById("full_name").value;
     emailInput = document.getElementById("email").value;
     commentInput = document.getElementById("comment").value;
+   
+
+    // if (nameInput.trim().length === 0 || emailInput.trim().length === 0
+    //     || commentInput.trim().length === 0) {
+    //     alert("All fields require an input");
+    // }
+    // else if (commentInput.trim().length > 300) {
+    //     alert("Cannot exceed more than 300 characters");
+
+    // }
+    // else if (!(emailInput.match(emailCorrectPattern))) {
+    //     alert("Please correct email address");
+    //     document.getElementById('email').value = '';
+    // }
 
     let validate = validateCommentsForm();
 
     if(validate) {
 
         let id = Date.now();
+    
         let thisDay = new Date();
         timestamp = thisDay.toString().split(' ');
         timestamp = timestamp.slice(1, 5).join(' ');
@@ -27,7 +42,11 @@ const addComment = (ev) => {
 
         comments.push(comment);
         localStorage.setItem('newComment',JSON.stringify(comments));
+        //const commentJSON = JSON.stringify(comment);
+        //localStorage.setItem('commented',commentJSON);
 
+        //comments.push(commentJSON);
+        //console.log(comments);
 
         let template;
 
@@ -42,6 +61,7 @@ const addComment = (ev) => {
         document.getElementById('comment').value = '';
     }
 };
+
 
 document.getElementById('submit-btn').addEventListener('click', addComment);
 
@@ -60,8 +80,8 @@ class Comment {
 
 
 function validateCommentsForm() {
-    if (nameInput.trim().length === 0 || emailInput.trim().length === 0 || 
-        commentInput.trim().length === 0) {
+    if (nameInput.trim().length === 0 || emailInput.trim().length === 0
+        || commentInput.trim().length === 0) {
         alert("All fields require an input");
         return false;
     }
@@ -86,7 +106,7 @@ function displayTable() {
     
     for (let i=0; i<tcomment.length; i++){
         if (tcomment[i].recipeId == recipeId){
-            
+            //window.alert("tcomment: " + tcomment[i].recipeId + "This recipe: " + recipeId)
         let template;
 
         template = '<tr><td>' + tcomment[i].userName + '</td>';

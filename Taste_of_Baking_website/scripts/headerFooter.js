@@ -87,9 +87,9 @@ for (let category of categories) {
 }
 document.writeln('</ul>');
 document.writeln('</nav>');
-document.writeln('<form class="textBar" id="searchForm">');
+document.writeln('<form class="textBar" id="searchForm">'); // must be changed to search page
 document.writeln('<input type="search" name="searchBar" id="searchBar" size="50" autofocus />');
-document.writeln('<button type="submit" form="searchForm">Search</button>');
+document.writeln('<button type="submit" form="searchForm" id="searchButton">Search</button>');
 document.writeln('</form>');
 document.writeln('</header>');
 }

@@ -8,7 +8,7 @@
     <meta name="description" content="Taste of Baking's Strawberry Cake recipe is straightforward and 
     can be completed in 1 hour." />
     <meta name="keywords" content="strawberry, cake, bake, egg, flour" />
-    <title>Strawberry Cake | Taste of Baking</title>
+    <title>Kit Kat Cake | Taste of Baking</title>
     <link rel="stylesheet" href="styles/recipe.css" />
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,10 +29,10 @@
         <script>writeHeader();</script>
         <main>
             <div class="grid" >
-                <div class="recipe" id="recipe_01">
-                    <h1 >Strawberry Cake</h1>
+                <div class="recipe" id="recipe_03">
+                    <h1 >Kit Kat Cake</h1>
                     <figure id="figure1">
-                        <img id="recipe-image" src="images/recipe.jpg" alt="Strawberry Cake" title="Strawberry Cake" />
+                        <img id="recipe-image" src="images/kitkat_cake.jpg" alt="Kit Kat Cake" title="Kit Kat Cake" />
                         <figcaption>Difficulty:
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -53,24 +53,24 @@
                     <aside id="ingredients">
                         <h2>Ingredients</h2>
                         <label for="proportion">Recipe Proportion:</label>
-                        <select id="proportion" onchange="updateRecipe();">
+                        <select id="proportion" onchange="updateRecipe(strawberryCake); updateServings();">
                             <option value="1">1x</option>
                             <option value="0.5">0.5x</option>
                             <option value="2">2x</option>
                         </select>
                         <ul>
-                            <li>2.5 cups cake flour</li>
-                            <li>2 teaspoons baking powder</li>
-                            <li>0.5 teaspoon baking soda</li>
-                            <li>1 teaspoon salt</li>
-                            <li>0.75 cup unsalted butter, softened to room temperature</li>
-                            <li>1.75 cups granulated sugar</li>
-                            <li>5 large egg whites, at room temperature</li>
-                            <li>0.33 cup sour cream or plain yogurt, at room temperature</li>
-                            <li>2 teaspoons pure vanilla extract</li>
-                            <li>0.5 cup whole milk, at room temperature*</li>
-                            <li>0.5 cup reduced strawberry puree</li>
-                            <li>2 drops red or pink food coloring (optional)</li>
+                            <li>2 and &frac12;<span> cups cake flour</span></li>
+                            <li>2<span> teaspoons baking powder</span></li>
+                            <li>&frac12;<span> teaspoon baking soda</span></li>
+                            <li>1<span> teaspoon salt</span></li>
+                            <li>&frac34;<span> cup unsalted butter, softened to room temperature</span></li>
+                            <li>1 and &frac34;<span> cups granulated sugar</span></li>
+                            <li>5<span> large egg whites, at room temperature</span></li>
+                            <li>1/3<span> cup sour cream or plain yogurt, at room temperature</span></li>
+                            <li>2<span> teaspoons pure vanilla extract</span></li>
+                            <li>&frac12;<span> cup whole milk, at room temperature*</span></li>
+                            <li>&frac12;<span> cup reduced strawberry puree</span></li>
+                            <li>2<span> drops red or pink food coloring (optional)</span></li>
                         </ul>
                     </aside>
                     <aside id="timer">
@@ -127,11 +127,11 @@
                 <div class="cards">
                     <div class="card">
                         <div>
-                            <img src="images/kitkat_cake.jpg" alt="Kit Kat Cake" class="card__image"
-                                title="Kit Kat Cake" />
+                            <img src="images/recipe.jpg" alt="Strawberry Cake" class="card__image"
+                                title="Strawberry Cake" />
                         </div>
                         <div class="card__content">
-                            <p><a href="recipe3.html" class="card__link">Kit Kat Cake</a></p>
+                            <p><a href="recipe.html" class="card__link">Strawberry Cake</a></p>
                         </div>
                         <div class="difficulty">Difficulty:<br>
                             <span class="fa fa-star checked"></span>
@@ -143,11 +143,11 @@
                     </div>
                     <div class="card">
                         <div>
-                            <img src="images/cheesecake1.jpg" alt="Cheese Cake" class="card__image"
-                                title="Cheese Cake" />
+                            <img src="images/pistachio_hazelnut_cake.jpg" alt="pistachio hazelnut cake" class="card__image"
+                                title="pistachio hazelnut cake" />
                         </div>
                         <div class="card__content">
-                            <p><a href="#" class="card__link">Cheese Cake</a></p>
+                            <p><a href="recipe2.html" class="card__link">Cheese Cake</a></p>
                         </div>
                         <div class="difficulty">Difficulty:<br>
                             <span class="fa fa-star checked"></span>
@@ -208,7 +208,7 @@
                         <button id="submit-btn" type="submit" >Submit Comment</button>    
                 </form>
             </div>
-            <div id="table-div">
+            <div>
             <table id="comments-table">
                 <caption id ="table-caption" style="caption-side: top;">Comments</caption>
                 <tr>
