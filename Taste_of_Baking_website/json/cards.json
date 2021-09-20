@@ -104,7 +104,7 @@
         "image": "CinnamonRaisinBread.jpg",
         "difficulty": 4,
         "category": "bread",
-        "groups": "all low calorie",
+        "groups": "all low_calorie",
         "date": "30/06/2005"
     },
     {
@@ -113,7 +113,7 @@
         "image": "AppleCinnamonBread.jpg",
         "difficulty": 3,
         "category": "bread",
-        "groups": "all low calorie",
+        "groups": "all low_calorie",
         "date": "30/06/2019"
     },
     {
