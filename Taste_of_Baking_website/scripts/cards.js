@@ -22,11 +22,13 @@ ourRequest.onload = function(){ //process cards on load
             card.category.includes(word)
             ))});
 
-    } else {let filter = cards.filter(card => {return card.category.includes(page)});
-    filter.length > 0 ? cards = filter : cards; }// if not on search page, filter cards by category, or if not a category, show all cards
+    } else {
+        sessionStorage.removeItem('q'); //remove search query if not on search page
+        
+        let filter = cards.filter(card => {return card.category.includes(page)});
+        filter.length > 0 ? cards = filter : cards; }// if not on search page, filter cards by category, or if not a category, show all cards
 
     renderHTML(cards); //process the cards array into html
-    sessionStorage.removeItem('q');
 };
 ourRequest.send(); //send the request
 
@@ -49,7 +51,8 @@ function renderHTML(data){ //cards processing function
     if(htmlString == "") {htmlString = '<p>Sorry, nothing found.</p>'}
     container.innerHTML = htmlString;
 }
-}
+} else {sessionStorage.removeItem('q');} //remove search query if not on any page containing "containers"
+
 /* on click, search bar takes you to a search page where it shows you your search results.
 thing is then done there */
 
@@ -105,7 +108,7 @@ $(function(){
             $('.low_calorie').hide();
         }
     });
-    
+
     var container = $(".containers");
     var items = document.getElementsByClassName('column');
     
