@@ -22,7 +22,7 @@ startBtn.addEventListener('click', function () {
         alert("Please enter a number");
     }
     else if (minutesInt > 60 || secondsInt > 60) {
-        alert("Please enter a valid number");
+        alert("Please enter a number less than or equal to 60");
     }
     else {
         var totalSeconds = hoursInt * 60 * 60 + minutesInt * 60 + secondsInt;
